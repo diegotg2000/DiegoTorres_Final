@@ -33,7 +33,7 @@ A.append(10*np.random.random(size=(4,1))-5*np.ones(shape=(4,1)))
 
 for i in range(1,N):
 	anterior=A[i-1]
-	nuevo=anterior + np.random.normal(loc=0.0, scale=0.6, size=(4,1))
+	nuevo=anterior + np.random.normal(loc=0.0, scale=0.1, size=(4,1))
 	pantes=loglikelihood(anterior)
 	pdespues=loglikelihood(nuevo)
 	r=pantes/pdespues
@@ -45,7 +45,7 @@ for i in range(1,N):
 
 		
 A=np.array(A)
-print('x',np.mean(A[0,:]))
-print('y',np.mean(A[1,:]))
-print('tiempo',np.mean(A[2,:]))
-print('vel',np.mean(A[3,:]))
+print('x',np.mean(A[:,0]))
+print('y',np.mean(A[:,1]))
+print('tiempo',np.mean(A[:,2]))
+print('vel',np.mean(A[:,3]))
